@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial,  sans-serif;
+    line-height: 1.6;
+    background-color: #050b14;
+    color:white;
+
+}
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+
+nav {
+    background-color: #222;
+    padding: 12px;
+
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 25px;
+}
+ nav a:hover {
+    color: #1683ff;
+ }
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px ;
+
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card,
+.player-card,
+.service-card {
+    background-color :#d4af37 #d4af37;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+
+}
+
+.player-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+}
+.player-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.player-card:hover {
+    transform: translateY(-5px);
+}
+.player-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+ button,
+ .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color:#1683ff;
+    color:white;
+    border: none;
+    border-radius:5px ;
+    text-decoration: none;
+    cursor: pointer;
+  
+ }
+
+ button:hover,
+ .btn:hover{
+    background-color: #0f6dcc;
+
+ }
+
+ footer{
+    background-color: #111;
+    color:white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+ }
+ /*tablet*/
+ @media (max-width: 900px) {
+    .player-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav ul {
+        gap:12px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+ }
+ /* mobile*/
+ @media ( max-width: 600px) {
+    main{
+        width: 95%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+    }
+    .player-container {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    /* Services */
+        main h2 {
+        color: #1683ff;
+        margin-top: 30px;
+    }
+
+        main h2 + p {
+        background-color: #d4af37;
+        color: #111;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+    }
+
+
